@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bdd.ihm_tracklab.FXMLChercheurController">
+   <children>
+      <Pane prefHeight="62.0" prefWidth="827.0" style="-fx-border-color: black; -fx-background-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="button_logout" layoutX="649.0" layoutY="15.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="164.0" style="-fx-background-color: #e74040;" text="Deconnexion" textFill="WHITE" />
+            <Text fx:id="txt_nom_chercheur" fill="WHITE" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jack Deroix" wrappingWidth="233.21875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="button_resultats" layoutX="304.0" layoutY="73.0" mnemonicParsing="false" onAction="#onBtnResultats" prefHeight="27.0" prefWidth="101.0" style="-fx-background-color: green;" text="Résultats" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table_chercheur" layoutX="13.0" layoutY="111.0" prefHeight="423.0" prefWidth="392.0">
+        <columns>
+          <TableColumn fx:id="col_nomc" prefWidth="225.0" text="nom" />
+            <TableColumn fx:id="col_etatc" prefWidth="74.0" text="Etat" />
+            <TableColumn fx:id="col_datec" prefWidth="92.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="button_new_exp" layoutX="133.0" layoutY="73.0" mnemonicParsing="false" onAction="#onBtnNewExp" prefHeight="27.0" prefWidth="152.0" style="-fx-background-color: grey;" text="Nouvelle expérience" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="txt_nom_exp" layoutX="414.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience " textAlignment="CENTER" wrappingWidth="398.21875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="422.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prise en charge par :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_nomlab" layoutX="570.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom laborantin" wrappingWidth="246.2187532633543" />
+      <Text layoutX="422.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de l'expérience :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_type_exp" layoutX="570.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type_exp" wrappingWidth="246.21875" />
+      <Text layoutX="422.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Biologique :" wrappingWidth="137.21874487120658" />
+      <Text fx:id="txt_AgBio" layoutX="570.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom Agent Bio" wrappingWidth="246.2187532633543" />
+      <Text layoutX="422.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée de l'experience :" wrappingWidth="144.21874487120658" />
+      <Text fx:id="txt_duree" layoutX="570.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="min duree exp" wrappingWidth="201.21875" />
+   </children>
+</AnchorPane>

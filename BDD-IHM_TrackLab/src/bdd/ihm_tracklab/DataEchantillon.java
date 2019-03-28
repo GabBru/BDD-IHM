@@ -6,49 +6,39 @@
 package bdd.ihm_tracklab;
 
 /**
- *
+ * 
  * @author brunetgabriel
  */
 public class DataEchantillon {
-    private float qA, qC, qN;
-    private Experiences experience;
+    private String qA, qC, qN;
 
-    public DataEchantillon(float qA, float qC, float qN, Experiences experience) {
+    public DataEchantillon(String qA, String qC, String qN) {
         this.qA = qA;
         this.qC = qC;
         this.qN = qN;
-        this.experience = experience;
     }
 
-    public float getqA() {
+    public String getqA() {
         return qA;
     }
 
-    public float getqC() {
+    public String getqC() {
         return qC;
     }
 
-    public float getqN() {
+    public String getqN() {
         return qN;
     }
 
-    public Experiences getExperience() {
-        return experience;
-    }
-
-    public void setExperience(Experiences experience) {
-        this.experience = experience;
-    }  
-
-    public void setqA(float qA) {
+    public void setqA(String qA) {
         this.qA = qA;
     }
 
-    public void setqC(float qC) {
+    public void setqC(String qC) {
         this.qC = qC;
     }
 
-    public void setqN(float qN) {
+    public void setqN(String qN) {
         this.qN = qN;
     }
 }

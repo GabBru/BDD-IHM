@@ -5,16 +5,20 @@
  */
 package bdd.ihm_tracklab;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 /**
  *
  * @author brunetgabriel
  */
 public class Experiences {
-    private String nom_exp, type_exp, date, AgBio, replicats, duree, seuil1, seuil2, frequence;
+    private String nom_exp, type_exp, date, AgBio, replicats, duree, seuil1, seuil2, frequence, etat;
     private Chercheur chercheur;
-    private Laborantin laboratin;
+    private Laborantin laborantin;
+    public static ObservableList<DataEchantillon> listeEchantillon;
 
-    public Experiences(String nom_exp, String type_exp, String date, String AgBio, String replicats, String duree, String seuil1, String seuil2, String frequence, Chercheur chercheur, Laborantin laboratin) {
+    public Experiences(String nom_exp, String type_exp, String date, String AgBio, String replicats, String duree, String seuil1, String seuil2, String frequence, Chercheur chercheur, Laborantin laborantin, ObservableList<DataEchantillon> listeEchantillon) {
         this.nom_exp = nom_exp;
         this.type_exp = type_exp;
         this.date = date;
@@ -25,7 +29,13 @@ public class Experiences {
         this.seuil2 = seuil2;
         this.frequence = frequence;
         this.chercheur = chercheur;
-        this.laboratin = laboratin;
+        this.etat = "En attente";
+        this.laborantin = laborantin;
+        this.listeEchantillon = listeEchantillon;
+    }
+
+    public ObservableList<DataEchantillon> getListeEchantillon() {
+        return listeEchantillon;
     }
 
     public String getNom_exp() {
@@ -44,8 +54,8 @@ public class Experiences {
         return chercheur;
     }
 
-    public Laborantin getLaboratin() {
-        return laboratin;
+    public Laborantin getLaborantin() {
+        return laborantin;
     }
 
     public String getAgBio() {
@@ -72,6 +82,14 @@ public class Experiences {
         return frequence;
     }
 
+    public String getEtat() {
+        return etat;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
     public void setNom_exp(String nom_exp) {
         this.nom_exp = nom_exp;
     }
@@ -88,8 +106,8 @@ public class Experiences {
         this.chercheur = chercheur;
     }
 
-    public void setLaboratin(Laborantin laboratin) {
-        this.laboratin = laboratin;
+    public void setLaborantin(Laborantin laboratin) {
+        this.laborantin = laboratin;
     }
 
     public void setAgBio(String AgBio) {

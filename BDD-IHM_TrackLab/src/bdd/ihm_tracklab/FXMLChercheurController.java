@@ -30,7 +30,7 @@ import javafx.stage.Stage;
 public class FXMLChercheurController implements Initializable {
 
         @FXML
-        private TableView table_chercheur;
+        private TableView<Experiences> table_chercheur;
         @FXML
         private TableColumn col_nomc;
         @FXML
@@ -53,7 +53,7 @@ public class FXMLChercheurController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         col_nomc.setCellValueFactory(
-            new PropertyValueFactory<>("nom_exp"));
+            new PropertyValueFactory<>("nom_exp")); 
         col_etatc.setCellValueFactory(
             new PropertyValueFactory<>("etat"));
         col_datec.setCellValueFactory(
@@ -83,6 +83,6 @@ public class FXMLChercheurController implements Initializable {
         txt_type_exp.setText(ligneSelectionnee.get(0).getType_exp());
         txt_AgBio.setText(ligneSelectionnee.get(0).getAgBio());
         txt_duree.setText(ligneSelectionnee.get(0).getDate());
-        txt_nomlab.setText(ligneSelectionnee.get(0).getLaboratin().getPrenom()+" "+ligneSelectionnee.get(0).getLaboratin().getNom());
+        txt_nomlab.setText(ligneSelectionnee.get(0).getLaborantin().getPrenom()+" "+ligneSelectionnee.get(0).getLaborantin().getNom());
     }
 }

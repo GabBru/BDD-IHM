@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="609.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bdd.ihm_tracklab.FXMLNew_ExpController">
+<AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="609.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bdd.ihm_tracklab.FXMLNew_ExpController">
    <children>
       <Button fx:id="button_retour" layoutX="40.0" layoutY="99.0" mnemonicParsing="false" onAction="#onBtnRetourClick" prefHeight="36.0" prefWidth="92.0" style="-fx-background-color: white;" text="&lt; Retour" textFill="#3b259e" />
       <Text layoutX="190.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails de l'expérience" textAlignment="CENTER" wrappingWidth="232.8232421875">
@@ -21,7 +21,7 @@
       <Pane layoutY="-1.0" prefHeight="73.0" prefWidth="609.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <TextField fx:id="field_nom" disable="true" layoutX="28.0" layoutY="23.0" />
-            <Button fx:id="button_logout" layoutX="424.0" layoutY="20.0" mnemonicParsing="false" onAction="#onBtnLogOut" prefHeight="33.0" prefWidth="164.0" style="-fx-background-color: #e74040;" text="Deconnexion" textFill="WHITE" />
+            <Button fx:id="button_logout" layoutX="424.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="164.0" style="-fx-background-color: #e74040;" text="Deconnexion" textFill="WHITE" />
          </children>
       </Pane>
       <Text layoutX="102.0" layoutY="157.431640625" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience" wrappingWidth="146.78971022181327" />
@@ -41,14 +41,21 @@
       <Text layoutX="87.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails des échantillons - g/L" wrappingWidth="293.1487495284539" />
       <Text layoutX="344.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée de l'expérience (min)" wrappingWidth="178.07254713587577" />
       <TextField fx:id="field_duree_exp" layoutX="346.0" layoutY="219.0" />
-      <Text layoutX="93.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de plaques" wrappingWidth="178.07254713587577" />
-      <Text layoutX="261.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fréquence des relevés (min) - si suivie dans le temps" wrappingWidth="337.07254713587577" />
-      <TextField fx:id="field_frequence" layoutX="257.0" layoutY="525.0" />
+      <Text layoutX="87.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fréquence des relevés (min) - si suivie dans le temps" wrappingWidth="337.07254713587577" />
+      <TextField fx:id="field_frequence" layoutX="87.0" layoutY="560.0" />
       <Text layoutX="328.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seuils d'acceptabilité" wrappingWidth="178.07254713587577" />
       <TextField fx:id="field_seuil1" layoutX="328.0" layoutY="274.0" prefHeight="29.0" prefWidth="63.0" text="min" />
-      <Button fx:id="button_submit" layoutX="271.0" layoutY="564.0" mnemonicParsing="false" onAction="#onBtnSubmitClick" style="-fx-background-color: green;" text="Soumettre" textFill="WHITE" />
+      <Button fx:id="button_submit" layoutX="271.0" layoutY="594.0" mnemonicParsing="false" onAction="#onBtnSubmitClick" style="-fx-background-color: green;" text="Soumettre" textFill="WHITE" />
       <ChoiceBox fx:id="field_type_exp" layoutX="104.0" layoutY="217.0" prefHeight="27.0" prefWidth="208.0" />
-      <ChoiceBox fx:id="field_type_plaque" layoutX="93.0" layoutY="526.0" prefWidth="150.0" />
       <TextField fx:id="field_seuil2" layoutX="398.0" layoutY="274.0" prefHeight="29.0" prefWidth="63.0" text="max" />
+      <Text fx:id="err_frequence" fill="#f20202" layoutX="433.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="frequence &gt; duree" textAlignment="CENTER" visible="false" wrappingWidth="146.7897157035768">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="field_qa" layoutX="86.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.A" />
+      <TextField fx:id="field_qc" layoutX="188.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.C" />
+      <TextField fx:id="field_qn" layoutX="290.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.N" />
+      <Button fx:id="button_add" layoutX="389.0" layoutY="503.0" mnemonicParsing="false" text="Ajouter" />
    </children>
 </AnchorPane>

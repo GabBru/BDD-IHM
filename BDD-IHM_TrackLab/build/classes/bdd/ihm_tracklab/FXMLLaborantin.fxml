@@ -25,7 +25,7 @@
             </Text>
          </children>
       </Pane>
-      <Button fx:id="button_details" layoutX="286.0" layoutY="64.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="101.0" style="-fx-background-color: green;" text="Détails" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="button_details" layoutX="286.0" layoutY="64.0" mnemonicParsing="false" onAction="#onBtnDetails" prefHeight="27.0" prefWidth="101.0" style="-fx-background-color: green;" text="Détails" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -35,6 +35,30 @@
           <TableColumn fx:id="col_noml" prefWidth="210.0" text="nom" />
             <TableColumn fx:id="col_datel" prefWidth="78.0" text="Date commande" />
             <TableColumn fx:id="col_statutl" prefWidth="84.0" text="Statut" />
+        </columns>
+      </TableView>
+      <Text layoutX="395.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commandée par :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_nom_chercheur" layoutX="543.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom chercheur" visible="false" wrappingWidth="246.2187532633543" />
+      <Text layoutX="395.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de l'expérience :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_type_exp" layoutX="543.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type_exp" visible="false" wrappingWidth="246.21875" />
+      <Text layoutX="395.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Biologique :" wrappingWidth="137.21874487120658" />
+      <Text fx:id="txt_AgBio" layoutX="543.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom Agent Bio" visible="false" wrappingWidth="246.2187532633543" />
+      <Text layoutX="395.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée de l'experience :" wrappingWidth="144.21874487120658" />
+      <Text fx:id="txt_duree" layoutX="543.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="min duree exp" visible="false" wrappingWidth="201.21875" />
+      <Text fx:id="txt_nom_exp" layoutX="424.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience " textAlignment="CENTER" visible="false" wrappingWidth="398.21875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="396.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de replicats :" wrappingWidth="144.21874487120658" />
+      <Text fx:id="txt_nb_replicat" layoutX="543.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nb replicat" visible="false" wrappingWidth="137.21875" />
+      <Text layoutX="396.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seuils d'acceptabilité :" wrappingWidth="144.21874487120658" />
+      <Text fx:id="txt_seuils" layoutX="543.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="seuils" visible="false" wrappingWidth="137.21875" />
+      <TableView fx:id="table_details_labo" layoutX="413.0" layoutY="273.0" prefHeight="200.0" prefWidth="398.0" visible="false">
+        <columns>
+          <TableColumn fx:id="col_Al" prefWidth="122.0" text="Quant.A" />
+          <TableColumn fx:id="col_Cl" prefWidth="137.0" text="Quant.C" />
+            <TableColumn fx:id="col_Nl" prefWidth="138.0" text="Quant.N" />
         </columns>
       </TableView>
    </children>

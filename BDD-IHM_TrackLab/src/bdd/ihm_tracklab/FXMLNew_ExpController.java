@@ -5,6 +5,7 @@
  */
 package bdd.ihm_tracklab;
 
+import static bdd.ihm_tracklab.Experiences.listeEchantillon;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -50,7 +52,13 @@ public class FXMLNew_ExpController implements Initializable {
     @FXML
     private TextField field_frequence;
     @FXML
-    private TableView<String> tab_details;
+    private TextField field_qa;
+    @FXML
+    private TextField field_qc;
+    @FXML
+    private TextField field_qn;
+    @FXML
+    private TableView<DataEchantillon> tab_details;
     @FXML
     private TableColumn<String,String> col_A;
     @FXML
@@ -60,6 +68,7 @@ public class FXMLNew_ExpController implements Initializable {
     
     private final ObservableList<String> listeTypeExp = FXCollections.observableArrayList();
     private final ObservableList<String> listeTypePlaque = FXCollections.observableArrayList();
+    private ObservableList<DataEchantillon> list = FXCollections.observableArrayList();
 
     /**
      * Initializes the controller class.
@@ -73,6 +82,15 @@ public class FXMLNew_ExpController implements Initializable {
         
         field_type_exp.setItems(listeTypeExp);
         field_type_plaque.setItems(listeTypePlaque);
+        
+        col_A.setCellValueFactory(
+            new PropertyValueFactory<>("qA"));
+        col_C.setCellValueFactory(
+            new PropertyValueFactory<>("qC"));
+        col_N.setCellValueFactory(
+            new PropertyValueFactory<>("qN")
+        );  
+        tab_details.setEditable(true);
     }    
     
     @FXML
@@ -84,8 +102,9 @@ public class FXMLNew_ExpController implements Initializable {
     }
     
     @FXML
-    public void onBtnSubmitClick(ActionEvent event) throws IOException{    
-        DataExperience.listeExperience.add(new Experiences(field_nom_experience.getText(), field_type_exp.getValue().toString(), LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), field_AgBio.getText(), field_replicat.getText(), field_duree_exp.getText(), field_seuil1.getText(), field_seuil2.getText(), field_frequence.getText(), new Chercheur("Deroix","Jack"), new Laborantin("", "")));
+    public void onBtnSubmitClick(ActionEvent event) throws IOException{ 
+        list = tab_details.getItems();
+        DataExperience.listeExperience.add(new Experiences(field_nom_experience.getText(), field_type_exp.getValue().toString(), LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), field_AgBio.getText(), field_replicat.getText(), field_duree_exp.getText(), field_seuil1.getText(), field_seuil2.getText(), field_frequence.getText(), new Chercheur("Deroix","Jack"), new Laborantin("", ""), list));
         Parent home_page = FXMLLoader.load(getClass().getResource("FXMLChercheur.fxml"));
         Stage app = (Stage)((Node) event.getSource()).getScene().getWindow();
         app.setScene(new Scene(home_page));
@@ -99,4 +118,12 @@ public class FXMLNew_ExpController implements Initializable {
         app.setScene(new Scene(home_page));
         app.show();
     } 
+    
+    @FXML
+    public void onBtnAdd(ActionEvent event) throws IOException {
+        list.add(new DataEchantillon(field_qa.getText(), field_qc.getText(), field_qn.getText()));
+        field_qa.clear();
+        field_qc.clear();
+        field_qn.clear();
+    }
 }

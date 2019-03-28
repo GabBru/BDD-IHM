@@ -5,7 +5,6 @@
  */
 package bdd.ihm_tracklab;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
@@ -13,12 +12,12 @@ import javafx.collections.ObservableList;
  * @author brunetgabriel
  */
 public class Experiences {
-    private String nom_exp, type_exp, date, AgBio, replicats, duree, seuil1, seuil2, frequence, etat;
+    private String nom_exp, type_exp, date, AgBio, replicats, duree, seuil1, seuil2, frequence, etat, plaque;
     private Chercheur chercheur;
     private Laborantin laborantin;
     public static ObservableList<DataEchantillon> listeEchantillon;
 
-    public Experiences(String nom_exp, String type_exp, String date, String AgBio, String replicats, String duree, String seuil1, String seuil2, String frequence, Chercheur chercheur, Laborantin laborantin, ObservableList<DataEchantillon> listeEchantillon) {
+    public Experiences(String nom_exp, String type_exp, String date, String AgBio, String replicats, String duree, String seuil1, String seuil2, String frequence, String plaque, Chercheur chercheur, Laborantin laborantin, ObservableList<DataEchantillon> listeEchantillon) {
         this.nom_exp = nom_exp;
         this.type_exp = type_exp;
         this.date = date;
@@ -30,6 +29,7 @@ public class Experiences {
         this.frequence = frequence;
         this.chercheur = chercheur;
         this.etat = "En attente";
+        this.plaque = plaque;
         this.laborantin = laborantin;
         this.listeEchantillon = listeEchantillon;
     }
@@ -44,6 +44,14 @@ public class Experiences {
 
     public String getType_exp() {
         return type_exp;
+    }
+
+    public String getPlaque() {
+        return plaque;
+    }
+
+    public void setPlaque(String plaque) {
+        this.plaque = plaque;
     }
 
     public String getDate() {

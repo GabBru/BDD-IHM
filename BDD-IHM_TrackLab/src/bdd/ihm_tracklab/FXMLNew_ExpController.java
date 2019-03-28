@@ -5,7 +5,6 @@
  */
 package bdd.ihm_tracklab;
 
-import static bdd.ihm_tracklab.Experiences.listeEchantillon;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -36,8 +35,6 @@ public class FXMLNew_ExpController implements Initializable {
     @FXML
     private ChoiceBox field_type_exp;
     @FXML
-    private ChoiceBox field_type_plaque;
-    @FXML
     private TextField field_nom_experience;
     @FXML
     private TextField field_AgBio;
@@ -67,7 +64,6 @@ public class FXMLNew_ExpController implements Initializable {
     private TableColumn<String,String> col_N;  
     
     private final ObservableList<String> listeTypeExp = FXCollections.observableArrayList();
-    private final ObservableList<String> listeTypePlaque = FXCollections.observableArrayList();
     private ObservableList<DataEchantillon> list = FXCollections.observableArrayList();
 
     /**
@@ -77,19 +73,15 @@ public class FXMLNew_ExpController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         listeTypeExp.add("Colorimétrique");
         listeTypeExp.add("Opacimétrique");
-        listeTypePlaque.add("96");
-        listeTypePlaque.add("384");
         
         field_type_exp.setItems(listeTypeExp);
-        field_type_plaque.setItems(listeTypePlaque);
         
         col_A.setCellValueFactory(
             new PropertyValueFactory<>("qA"));
         col_C.setCellValueFactory(
             new PropertyValueFactory<>("qC"));
         col_N.setCellValueFactory(
-            new PropertyValueFactory<>("qN")
-        );  
+            new PropertyValueFactory<>("qN"));  
         tab_details.setEditable(true);
     }    
     
@@ -104,7 +96,7 @@ public class FXMLNew_ExpController implements Initializable {
     @FXML
     public void onBtnSubmitClick(ActionEvent event) throws IOException{ 
         list = tab_details.getItems();
-        DataExperience.listeExperience.add(new Experiences(field_nom_experience.getText(), field_type_exp.getValue().toString(), LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), field_AgBio.getText(), field_replicat.getText(), field_duree_exp.getText(), field_seuil1.getText(), field_seuil2.getText(), field_frequence.getText(), new Chercheur("Deroix","Jack"), new Laborantin("", ""), list));
+        DataExperience.listeExperience.add(new Experiences(field_nom_experience.getText(), field_type_exp.getValue().toString(), LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")), field_AgBio.getText(), field_replicat.getText(), field_duree_exp.getText(), field_seuil1.getText(), field_seuil2.getText(), field_frequence.getText(),"", new Chercheur("Deroix","Jack"), new Laborantin("", ""), list));
         Parent home_page = FXMLLoader.load(getClass().getResource("FXMLChercheur.fxml"));
         Stage app = (Stage)((Node) event.getSource()).getScene().getWindow();
         app.setScene(new Scene(home_page));
@@ -125,5 +117,6 @@ public class FXMLNew_ExpController implements Initializable {
         field_qa.clear();
         field_qc.clear();
         field_qn.clear();
+        tab_details.setItems(list);
     }
 }

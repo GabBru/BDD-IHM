@@ -8,6 +8,7 @@ package bdd.ihm_tracklab;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -36,15 +38,17 @@ public class FXMLLaborantinController implements Initializable {
     @FXML
     private TableColumn<Experiences,String> col_noml;
     @FXML
-    private TableColumn<Experiences,String> col_Al;
+    private TableColumn<String,String> col_Al;
     @FXML
-    private TableColumn<Experiences,String> col_Cl;
+    private TableColumn<String,String> col_Cl;
     @FXML
-    private TableColumn<Experiences,String> col_Nl;
+    private TableColumn<String,String> col_Nl;
     @FXML
     private TableColumn<Experiences,String> col_datel;
     @FXML
     private TableColumn<Experiences,String> col_statutl;
+    @FXML
+    private ChoiceBox choice_type_plaque;
     @FXML
     private Text txt_nom_exp;
     @FXML
@@ -60,6 +64,8 @@ public class FXMLLaborantinController implements Initializable {
     @FXML
     private Text txt_seuils;
     
+    private final ObservableList<String> listeTypePlaque = FXCollections.observableArrayList();
+    
     /**
      * Initializes the controller class.
      */
@@ -72,6 +78,13 @@ public class FXMLLaborantinController implements Initializable {
         col_datel.setCellValueFactory(
             new PropertyValueFactory<>("date"));  
         table_lab.setItems(DataExperience.listeExperience);
+        
+        listeTypePlaque.add("96");
+        listeTypePlaque.add("384");
+        
+        choice_type_plaque.setItems(listeTypePlaque);
+        
+        txt_nom_chercheur.setText("Jack Deroix");
     }    
     
     @FXML
@@ -80,6 +93,16 @@ public class FXMLLaborantinController implements Initializable {
         Stage app = (Stage)((Node) event.getSource()).getScene().getWindow();
         app.setScene(new Scene(home_page));
         app.show(); 
+    }
+    
+    public void onBtnDemarrer(ActionEvent event) throws IOException {
+        ObservableList<Experiences> ligneSelectionnee;
+        ligneSelectionnee = table_lab.getSelectionModel().getSelectedItems();
+        ligneSelectionnee.get(0).setPlaque(choice_type_plaque.getValue().toString());
+        ligneSelectionnee.get(0).setEtat("En cours");
+        ligneSelectionnee.get(0).getLaborantin().setNom("Delavoix");
+        ligneSelectionnee.get(0).getLaborantin().setPrenom("Luc");
+        table_lab.setItems(DataExperience.listeExperience);
     }
     
     public void onBtnDetails(ActionEvent event) throws IOException {
@@ -100,7 +123,7 @@ public class FXMLLaborantinController implements Initializable {
         txt_duree.setVisible(true);  
         txt_seuils.setVisible(true);
         txt_nb_replicat.setVisible(true);
-        
+        choice_type_plaque.setVisible(true);
         // table des n-uplets
         col_Al.setCellValueFactory(
             new PropertyValueFactory<>("qA")); 

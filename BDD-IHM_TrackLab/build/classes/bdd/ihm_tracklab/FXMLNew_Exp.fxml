@@ -20,8 +20,12 @@
       </Text>
       <Pane layoutY="-1.0" prefHeight="73.0" prefWidth="609.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="field_nom" disable="true" layoutX="28.0" layoutY="23.0" />
             <Button fx:id="button_logout" layoutX="424.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="164.0" style="-fx-background-color: #e74040;" text="Deconnexion" textFill="WHITE" />
+            <Text fx:id="txt_nom_chercheur" fill="WHITE" layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Prenom" wrappingWidth="305.21875">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
       <Text layoutX="102.0" layoutY="157.431640625" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience" wrappingWidth="146.78971022181327" />
@@ -56,6 +60,6 @@
       <TextField fx:id="field_qa" layoutX="86.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.A" />
       <TextField fx:id="field_qc" layoutX="188.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.C" />
       <TextField fx:id="field_qn" layoutX="290.0" layoutY="503.0" prefHeight="27.0" prefWidth="92.0" promptText="Quant.N" />
-      <Button fx:id="button_add" layoutX="389.0" layoutY="503.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="button_add" layoutX="389.0" layoutY="503.0" mnemonicParsing="false" onAction="#onBtnAdd" text="Ajouter" />
    </children>
 </AnchorPane>

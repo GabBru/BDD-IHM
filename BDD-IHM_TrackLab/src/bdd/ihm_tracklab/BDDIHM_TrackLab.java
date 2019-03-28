@@ -40,19 +40,18 @@ public class BDDIHM_TrackLab extends Application {
         listeEchantillon1.add(new DataEchantillon("3","4","5"));
         listeEchantillon2.add(new DataEchantillon("6","12","21"));
         listeEchantillon3.add(new DataEchantillon("5","11","9")); listeEchantillon3.add(new DataEchantillon("1","2","3"));
-
-        DataExperience.listeExperience.add(new Experiences("Test de l'iso-isolicine", "Colorimétrique", "12/03/2018", "B-mercaptoéthanol", "3", "120", "0.05", "0.10", "5", new Chercheur("Deroix","Jack"), new Laborantin("Delavoix","Luc"), listeEchantillon1));
-        DataExperience.listeExperience.add(new Experiences("Rôle du DDT dans la détection des desoxyribose", "Colorimétrique", "15/03/2018", "DDT-diosulfite", "5", "80", "0.05", "0.06", "8", new Chercheur("Deroix","Jack"), new Laborantin("Delavoix","Luc"), listeEchantillon2));
-        DataExperience.listeExperience.add(new Experiences("Rôle des cellules nucléaires dans l'activité mitochondriale", "Opacimétrique", "11/03/2019", "Plutonium-849", "8", "25", "0.05", "0.12", "", new Chercheur("Deroix","Jack"), new Laborantin("Delavoix","Luc"), listeEchantillon3));
+        
+        DataExperience.listeExperience.add(new Experiences("Test de l'iso-isolicine", "Colorimétrique", "12-03-2018", "B-mercaptoéthanol", "3", "120", "0.05", "0.10", "5","", new Chercheur("Deroix","Jack"), new Laborantin("",""), listeEchantillon1));
+        DataExperience.listeExperience.add(new Experiences("Rôle du DDT dans la détection des desoxyribose", "Colorimétrique", "15-03-2018", "DDT-diosulfite", "5", "80", "0.05", "0.06", "8","", new Chercheur("Deroix","Jack"), new Laborantin("",""), listeEchantillon2));
+        DataExperience.listeExperience.add(new Experiences("Rôle des cellules nucléaires dans l'activité mitochondriale", "Opacimétrique", "11-03-2019", "Plutonium-849", "8", "25", "0.05", "0.12", "","", new Chercheur("Deroix","Jack"), new Laborantin("",""), listeEchantillon3));
        } catch (IOException e) {}
     }
-
+    
     /**
      * Static methode lançant l'application.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
-    }
-    
+    } 
 }

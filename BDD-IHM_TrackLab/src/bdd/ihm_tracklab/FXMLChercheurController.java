@@ -82,7 +82,7 @@ public class FXMLChercheurController implements Initializable {
         txt_nom_exp.setText(ligneSelectionnee.get(0).getNom_exp());
         txt_type_exp.setText(ligneSelectionnee.get(0).getType_exp());
         txt_AgBio.setText(ligneSelectionnee.get(0).getAgBio());
-        txt_duree.setText(ligneSelectionnee.get(0).getDate());
+        txt_duree.setText(ligneSelectionnee.get(0).getDuree());
         txt_nomlab.setText(ligneSelectionnee.get(0).getLaborantin().getPrenom()+" "+ligneSelectionnee.get(0).getLaborantin().getNom());
     }
 }

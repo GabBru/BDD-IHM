@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -61,5 +62,7 @@
             <TableColumn fx:id="col_Nl" prefWidth="138.0" text="Quant.N" />
         </columns>
       </TableView>
+      <ChoiceBox fx:id="choice_type_plaque" layoutX="680.0" layoutY="235.0" prefWidth="150.0" visible="false" />
+      <Button fx:id="button_demarrer" layoutX="678.0" layoutY="480.0" mnemonicParsing="false" onAction="#onBtnDemarrer" style="-fx-background-color: blue;" text="Démarrer l'expérience" textFill="WHITE" />
    </children>
 </AnchorPane>

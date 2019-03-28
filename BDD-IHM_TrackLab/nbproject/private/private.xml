@@ -3,18 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLLaborantin.fxml</file>
-            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/DataExperience.java</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLConnexionController.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/Experiences.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLLaborantinController.java</file>
-            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/Laborantin.java</file>
-            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/BDDIHM_TrackLab.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLNew_ExpController.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLChercheur.fxml</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/DataEchantillon.java</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLChercheurController.java</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLLaborantin.fxml</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/DataExperience.java</file>
+            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/BDDIHM_TrackLab.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/Chercheur.java</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLNew_Exp.fxml</file>
             <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLConnexion.fxml</file>
-            <file>file:/Users/brunetgabriel/NetBeansProjects/BDD-IHM_TrackLab/src/bdd/ihm_tracklab/FXMLChercheurController.java</file>
         </group>
     </open-files>
 </project-private>

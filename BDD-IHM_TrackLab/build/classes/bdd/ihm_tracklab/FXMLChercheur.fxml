@@ -37,18 +37,18 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Text fx:id="txt_nom_exp" layoutX="414.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience " textAlignment="CENTER" wrappingWidth="398.21875">
+      <Text fx:id="txt_nom_exp" layoutX="414.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de l'expérience " textAlignment="CENTER" wrappingWidth="398.21875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="422.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prise en charge par :" wrappingWidth="137.21875" />
-      <Text fx:id="txt_nomlab" layoutX="570.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom laborantin" wrappingWidth="246.2187532633543" />
-      <Text layoutX="422.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de l'expérience :" wrappingWidth="137.21875" />
-      <Text fx:id="txt_type_exp" layoutX="570.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type_exp" wrappingWidth="246.21875" />
-      <Text layoutX="422.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Biologique :" wrappingWidth="137.21874487120658" />
-      <Text fx:id="txt_AgBio" layoutX="570.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom Agent Bio" wrappingWidth="246.2187532633543" />
-      <Text layoutX="422.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée de l'experience :" wrappingWidth="144.21874487120658" />
-      <Text fx:id="txt_duree" layoutX="570.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="min duree exp" wrappingWidth="201.21875" />
+      <Text layoutX="416.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prise en charge par :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_nomlab" layoutX="564.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom laborantin" wrappingWidth="246.2187532633543" />
+      <Text layoutX="416.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type de l'expérience :" wrappingWidth="137.21875" />
+      <Text fx:id="txt_type_exp" layoutX="564.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type_exp" wrappingWidth="246.21875" />
+      <Text layoutX="416.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent Biologique :" wrappingWidth="137.21874487120658" />
+      <Text fx:id="txt_AgBio" layoutX="564.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nom Agent Bio" wrappingWidth="246.2187532633543" />
+      <Text layoutX="416.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durée de l'experience :" wrappingWidth="144.21874487120658" />
+      <Text fx:id="txt_duree" layoutX="564.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="min duree exp" wrappingWidth="201.21875" />
    </children>
 </AnchorPane>

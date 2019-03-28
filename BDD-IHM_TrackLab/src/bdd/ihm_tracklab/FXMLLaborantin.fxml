@@ -64,5 +64,6 @@
       </TableView>
       <ChoiceBox fx:id="choice_type_plaque" layoutX="680.0" layoutY="235.0" prefWidth="150.0" visible="false" />
       <Button fx:id="button_demarrer" layoutX="678.0" layoutY="480.0" mnemonicParsing="false" onAction="#onBtnDemarrer" style="-fx-background-color: blue;" text="Démarrer l'expérience" textFill="WHITE" />
+      <Text fx:id="txt_taille_plaque" layoutX="681.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taille de la plaque" visible="false" wrappingWidth="126.00000021606684" />
    </children>
 </AnchorPane>

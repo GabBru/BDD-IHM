@@ -26,11 +26,11 @@ import javafx.stage.Stage;
 
 /**
  * FXML Controller class
- *
+ * 
  * @author brunetgabriel
  */
 public class FXMLLaborantinController implements Initializable {
-
+    
     @FXML 
     private TableView<Experiences> table_lab;
     @FXML 
@@ -63,6 +63,8 @@ public class FXMLLaborantinController implements Initializable {
     private Text txt_nb_replicat;
     @FXML
     private Text txt_seuils;
+    @FXML
+    private Text txt_taille_plaque;
     
     private final ObservableList<String> listeTypePlaque = FXCollections.observableArrayList();
     
@@ -102,12 +104,13 @@ public class FXMLLaborantinController implements Initializable {
         ligneSelectionnee.get(0).setEtat("En cours");
         ligneSelectionnee.get(0).getLaborantin().setNom("Delavoix");
         ligneSelectionnee.get(0).getLaborantin().setPrenom("Luc");
+        
         table_lab.setItems(DataExperience.listeExperience);
     }
     
     public void onBtnDetails(ActionEvent event) throws IOException {
         ObservableList<Experiences> ligneSelectionnee;
-        ligneSelectionnee = table_lab.getSelectionModel().getSelectedItems();  
+        ligneSelectionnee = table_lab.getSelectionModel().getSelectedItems();   
         txt_nom_exp.setText(ligneSelectionnee.get(0).getNom_exp());
         txt_nom_chercheur.setText(ligneSelectionnee.get(0).getChercheur().getPrenom()+" "+ligneSelectionnee.get(0).getChercheur().getNom());
         txt_type_exp.setText(ligneSelectionnee.get(0).getType_exp());
@@ -124,6 +127,7 @@ public class FXMLLaborantinController implements Initializable {
         txt_seuils.setVisible(true);
         txt_nb_replicat.setVisible(true);
         choice_type_plaque.setVisible(true);
+        txt_taille_plaque.setVisible(true);
         // table des n-uplets
         col_Al.setCellValueFactory(
             new PropertyValueFactory<>("qA")); 
